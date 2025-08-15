@@ -5,7 +5,6 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.6.12",
         "microphone": "*"
     },
     "files": [
@@ -16,7 +15,6 @@
         "potentio_bit.ts",
         "ir_bit.ts",
         "sound_bit.ts",
-        "rgb_bit.ts",
         "power.ts",
         "_locales/de/pxt-edubit-strings.json",
         "_locales/de/pxt-edubit-jsdoc-strings.json",
