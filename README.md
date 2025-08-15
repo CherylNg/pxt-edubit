@@ -1,4 +1,4 @@
-# EDU:BIT Extension for Microsoft MakeCode
+# EDU:BIT Extension for Microsoft MakeCode (modified to remove NeoPixel / RGB to make Bluetooth work)
 
 This code provides the driver for [**EDU:BIT** Training & Project Kit for micro:bit](https://www.cytron.io/p-edubit). EDU:BIT works with **micro:bit V1 & V2**.
   
@@ -120,58 +120,7 @@ edubitIrBit.onIrSensorEvent(IrEventType.Rise, function () {
     music.beginMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once)
 })
 ```
-  
-## RGB Bit
-Clear all RGB pixels.
-  
-```blocks
-edubitRgbBit.clear()
-```
-  
-Show rainbow color on all RGB pixels and change the brightness to maximum.
-  
-```blocks
-edubitRgbBit.showRainbow()
-edubitRgbBit.setBrightness(255)
-```
-  
-Show color green on all RGB pixels and change the color one by one to red.
-  
-```blocks
-edubitRgbBit.showColor(0x00ff00)
-basic.pause(1000)
-edubitRgbBit.setPixelColor(0, 0xff0000)
-basic.pause(500)
-edubitRgbBit.setPixelColor(1, 0xff0000)
-basic.pause(500)
-edubitRgbBit.setPixelColor(2, 0xff0000)
-basic.pause(500)
-edubitRgbBit.setPixelColor(3, 0xff0000)
-```
-  
-Show rainbow color and shift it out one by one.
-  
-```blocks
-edubitRgbBit.showRainbow()
-basic.pause(500)
-edubitRgbBit.shiftPixels(1)
-basic.pause(500)
-edubitRgbBit.shiftPixels(1)
-basic.pause(500)
-edubitRgbBit.shiftPixels(1)
-basic.pause(500)
-edubitRgbBit.shiftPixels(1)
-```
-  
-Show rainbow color and rotate it.
-  
-```blocks
-edubitRgbBit.showRainbow()
-basic.forever(function () {
-    edubitRgbBit.rotatePixels(1)
-    basic.pause(500)
-})
-```
+
   
 ## Traffic Light Bit
 Blink the yellow LED.
